@@ -20,6 +20,7 @@ class BookingView(APIView):
         return Response(serializer.data)
 
 class MenuItemView(generics.ListCreateAPIView):
+    permission_classes = [permissions.IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
