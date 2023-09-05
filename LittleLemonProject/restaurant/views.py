@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 
 from .models import Booking, Menu
 from .serializers import MenuSerializer, UserSerializer, BookingSerializer
+from rest_framework.decorators import api_view, permission_classes
 
 # Create your views here.
 def index(request):
